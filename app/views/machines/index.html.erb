@@ -1,5 +1,11 @@
 <h1><%= @owner.name %> Vending Machines</h1>
 
+<ul>
 <% @owner.machines.each do |machine| %>
   <p><%= link_to machine.location, machine_path(machine)%></p>
-<% end %>
+  <% machine.snacks.each do |snack| %>
+    <%= snack.name %>
+    <%= snack.price %>
+  <% end %>
+<% end  %>
+</ul>

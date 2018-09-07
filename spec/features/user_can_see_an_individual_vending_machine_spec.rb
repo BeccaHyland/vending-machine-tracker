@@ -17,7 +17,7 @@ feature 'When a user visits a vending machine show page' do
     snack_2 = dons.snacks.create(name: "zebra cakes", price: 2)
     snack_3 = Snack.create(name: "pop tart", price: 3)
 
-    visit machine_path(dons)
+    visit machine_path(dons)    
 
     expect(page).to have_content(snack_1.name)
     expect(page).to have_content(snack_1.price)
